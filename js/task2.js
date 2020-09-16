@@ -10,3 +10,9 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+ingredients.forEach(elem => {
+  let ingredientEl = document.createElement('li');
+  ingredientEl.textContent = elem;
+  const ulEl = document.querySelector('ul');
+  ulEl.appendChild(ingredientEl);
+});
