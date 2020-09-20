@@ -19,14 +19,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-images.forEach(elem => {
-  const ulEl = document.querySelector('ul');
-  let elementListEl = document.createElement('li');
-
-  let createImgEl = document.createElement('img');
-  createImgEl.src = elem.url;
-  createImgEl.alt = elem.alt;
-
-  elementListEl.appendChild(createImgEl);
-  ulEl.appendChild(elementListEl);
+const ulEl = document.querySelector('ul');
+const imagesEl = images.map(({ url, alt }) => {
+  let liEl = document.createElement('li');
+  let imgEl = document.createElement('img');
+  imgEl.src = url;
+  imgEl.alt = alt;
+  liEl.classList.add('images-list');
+  ulEl.classList.add('gallery-list');
+  liEl.appendChild(imgEl);
+  ulEl.appendChild(liEl);
+  return liEl;
 });
