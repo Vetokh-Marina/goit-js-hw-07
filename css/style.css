@@ -3,6 +3,9 @@ img {
   width: 140px;
   height: 100px;
 }
+a {
+  text-decoration: none;
+}
 .gallery-list {
   display: inline-flex;
   flex-wrap: wrap;
@@ -10,9 +13,9 @@ img {
   margin: 0;
 }
 .images-list {
+  list-style: none;
   margin-right: 20px;
   margin-bottom: 20px;
-  list-style: none;
 }
 #validation-input {
   border: 3px solid #bdbdbd;
